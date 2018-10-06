@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-class MainPage extends React.Component {
+class SearchPage extends React.Component {
   render() {
     return (
       <div className="search-books">
@@ -32,4 +32,4 @@ class MainPage extends React.Component {
   }
 }
 
-export default MainPage
+export default SearchPage
