@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 // import * as BooksAPI from './BooksAPI'
 import './App.css'
+import MainPage from './MainPage'
 
 class BooksApp extends React.Component {
   state = {
