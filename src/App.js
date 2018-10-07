@@ -16,6 +16,10 @@ class BooksApp extends React.Component {
     })
   }
 
+  updateShelf(book, shelf) {
+    update(book, shelf);
+  }
+
   render() {
     return (
       <div className="app">
@@ -29,6 +33,7 @@ class BooksApp extends React.Component {
         <Route exact path='/' render={ ({ history }) => (
             <ShowCase
                 bookIds={this.state.books}
+                updateShelf={this.updateShelf}
             />
         )} />
 
