@@ -6,6 +6,10 @@ import SearchPage from './SearchPage'
 import ShowCase from './ShowCase'
 
 class BooksApp extends React.Component {
+  state = {
+      books: []
+  }
+  
   render() {
     return (
       <div className="app">
