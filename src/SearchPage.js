@@ -61,6 +61,7 @@ class SearchPage extends React.Component {
                   <li key={b.id}>
                       <Book
                         book={b}
+                        updateShelf={this.props.updateShelf}
                       />
                   </li>
                 ))
