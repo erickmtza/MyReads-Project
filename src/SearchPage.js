@@ -6,7 +6,13 @@ class SearchPage extends React.Component {
     query: ''
   }
 
+  updateQuery = query => {
+    this.setState({ query })
+  }
+
   render() {
+    const { query } = this.state
+    
     return (
       <div className="search-books">
           <div className="search-books-bar">
