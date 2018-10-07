@@ -5,7 +5,8 @@ import sortBy from 'sort-by'
 
 class SearchPage extends React.Component {
   state = {
-    query: ''
+    query: '',
+    newBooks: []
   }
 
   updateQuery = query => {
