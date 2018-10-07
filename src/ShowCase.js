@@ -23,6 +23,7 @@ class ShowCase extends React.Component {
                       <li key={book.id}>
                           <Book
                             book={book}
+                            updateShelf={this.props.updateShelf}
                           />
                       </li>
                     ))
@@ -41,6 +42,7 @@ class ShowCase extends React.Component {
                       <li key={book.id}>
                           <Book
                             book={book}
+                            updateShelf={this.props.updateShelf}
                           />
                       </li>
                     ))
@@ -59,6 +61,7 @@ class ShowCase extends React.Component {
                       <li key={book.id}>
                           <Book
                             book={book}
+                            updateShelf={this.props.updateShelf}
                           />
                       </li>
                     ))
