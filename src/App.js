@@ -21,11 +21,15 @@ class BooksApp extends React.Component {
       <div className="app">
 
         <Route path='/search' render={() => (
-            <SearchPage />
+            <SearchPage
+
+            />
       )} />
 
         <Route exact path='/' render={ ({ history }) => (
-            <ShowCase />
+            <ShowCase
+                bookIds={this.state.books}
+            />
         )} />
 
       </div>
