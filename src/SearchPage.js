@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
 import * as BooksAPI from './BooksAPI'
 import Book from './Book'
 
@@ -16,7 +14,6 @@ class SearchPage extends React.Component {
   }
 
   bookSearch = (query) => {
-    let searchedBooks
     if (query) {
       BooksAPI.search(query).then(newBooks => {
         if(newBooks.error) {
