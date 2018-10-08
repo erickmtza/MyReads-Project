@@ -56,7 +56,7 @@ class SearchPage extends React.Component {
           <div className="search-books-results">
               <ol className="books-grid">
 
-                {this.state.newBooks.map(b => (
+                {this.state.query && this.state.newBooks.map(b => (
                   <li key={b.id}>
                       <Book
                         book={b}
