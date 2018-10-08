@@ -22,11 +22,11 @@ class SearchPage extends React.Component {
         if(newBooks.error) {
           this.setState({ newBooks: [] })
         } else if (newBooks.length > 0){
-          this.setState({ newBooks })
-          this.state.newBooks.forEach(newBook => {
+          newBooks.forEach(newBook => {
             let shelvedbooks = this.props.bookIds.filter(book => book.id === newBook.id)
             newBook.shelf = shelvedbooks[0] ? shelvedbooks[0].shelf : 'none'
           })
+          this.setState({ newBooks })
         }
       })
     } else {
