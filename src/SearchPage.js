@@ -12,18 +12,17 @@ class SearchPage extends React.Component {
   }
 
   updateQuery = query => {
-    this.setState({ query }, this.bookSearch())
+    this.setState({ query }, this.bookSearch(query))
   }
 
-  bookSearch = () => {
+  bookSearch = (query) => {
     let searchedBooks
-    if (this.state.query) {
-      const match = new RegExp(escapeRegExp(this.state.query), 'i')
-      searchedBooks = BooksAPI.search(this.state.query).then((searchedBooks) => {
-        if(searchedBooks.error) {
+    if (query) {
+      BooksAPI.search(query).then(newBooks => {
+        if(newBooks.error) {
           this.setState({ newBooks: [] })
-        } else if (searchedBooks.filter( bk => match.test(bk.name === this.state.query))){
-          this.setState({ newBooks: searchedBooks })
+        } else if (newBooks.length > 0){
+          this.setState({ newBooks })
         }
       })
     } else {
