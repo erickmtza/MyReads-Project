@@ -23,6 +23,10 @@ class SearchPage extends React.Component {
           this.setState({ newBooks: [] })
         } else if (newBooks.length > 0){
           this.setState({ newBooks })
+          this.state.newBooks.forEach(newBook => {
+            let shelvedbooks = this.props.bookIds.filter(book => book.id === newBook.id)
+            newBook.shelf = shelvedbooks[0] ? shelvedbooks[0].shelf : 'none'
+          })
         }
       })
     } else {
